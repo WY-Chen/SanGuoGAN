@@ -4,7 +4,8 @@
 
 This toy project is a cWGAN implementation trained on 790 character profile artworks by 三國志11 (property of Koei Co., Ltd.). The artworks are stylishly similar and can demonstrate the power of deep generative learning. The code implementation is originally from a class project for CSE599i Generative Models in UW, instructed by John Thickstun. A majority of code is in fact written by John for one homework problem on GAN. The image data are collected from the game directly and compressed to size 64x64, and the character stats data are obtain from the summary table made by cws0324@yahoo.com.tw. 
 
-To cleanse the data, we match images with character stats (Leadership, Martial Arts(War), Intelligence, Politics, and Charisma) by the character’s Chinese name. Note that some characters have multiple artworks (young and old), but the stats are the same (sorry 吕蒙). We visualize a random batch of images and stats below. 
+To cleanse the data, we match images with character stats (Leadership, Martial Arts(War), Intelligence, Politics, and Charisma) by the character’s Chinese name. Note that some characters have multiple artworks (young and old), but the stats are the same (sorry 吕蒙). We visualize a random batch of images and stats below.
+(The beautiful Radar plot code is from [This post](https://www.kaggle.com/typewind/draw-a-radar-chart-with-python-in-a-simple-way) and [This manu](https://matplotlib.org/3.1.1/gallery/specialty_plots/radar_chart.html).)
 
 ![Data Example](examples/dataexample.png)
 ![Stats Example](examples/dataexamplestats.png)
