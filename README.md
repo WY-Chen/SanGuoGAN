@@ -3,7 +3,7 @@
 三國志11 Character profile generator via Conditional Wasserstein Generative Adversarial Networks (cWGAN).
 
 ## Data and model
-This toy project is a cWGAN implementation trained on 721 character profile artworks by 三國志11 (property of Koei Co., Ltd.). The artworks are stylishly similar and do a good job of demonstrating the power of deep generative learning. The code implementation is originally from a class project for CSE599i Generative Models at UW, instructed by John Thickstun. The gradient penalty part is in fact written by John for one homework problem on GAN. The image data are collected from the game directly and compressed to size 64x64 and the character stats data are obtained from a summary table made by cws0324@yahoo.com.tw. 
+This toy project is a cWGAN implementation trained on 721 character profile artworks by 三國志11 (property of Koei Co., Ltd.). The artworks are stylishly similar and do a good job of demonstrating the power of deep generative learning. The image data are collected from the game directly and compressed to size 64x64 and the character stats data are obtained from a summary table made by cws0324@yahoo.com.tw. This was originally my class project for CSE599i Generative Models at UW, instructed by John Thickstun. The gradient penalty part is in fact written by John. 
 
 To process the data, I match images with in-game character stats (Leadership 统帅, Martial Arts(War) 武力, Intelligence 智力, Politics 政治, and Charisma 魅力) by the character’s Chinese name. Note that some characters have multiple artworks (young and old), but the stats are the same (except for 吕蒙, sorry), and there are two 马忠, one works for 吴 and one for 蜀. We visualize a random batch of images and stats below. (The beautiful Radar plot code is from [This post](https://www.kaggle.com/typewind/draw-a-radar-chart-with-python-in-a-simple-way) and [This document](https://matplotlib.org/3.1.1/gallery/specialty_plots/radar_chart.html).)
 
@@ -45,7 +45,7 @@ Now we fix some randomly-generated noise and use different stats from real chara
   <img src="examples/cwgan_profiles_example2_stats.png" width="400" />
 </p>
 
-Next, we fix some randomly-generated noise and use some artificial stats as input. In the left panel, we set INT=POL=CHAR=50 and vary LEAD=MAR in the range of (0,100). The plot shows the gradual change from civial to military artwork. In the right panel, we set LEAD=MAR=CHAR=50 and vary INT=POL in the range of (0,100). The plot shows the gradual change from military to civial artwork. 
+Next, we fix some randomly-generated noise and use some artificial stats as input. In the left panel, we set INT=POL=CHAR=50 and vary LEAD=MAR in the range of (0,100). The plot shows the gradual change from civial to military artwork. In the right panel, we set LEAD=MAR=CHAR=50 and vary INT=POL in the range of (0,100). The plot shows the gradual change from military to civial artwork. Note the subtle change of face from civil to military (narrow &rarr; wide), headgear (hat &rarr; helmet), beard (trimmed &rarr; full-beard), and clothing (cotton &rarr; armour).
 
 <p float="middle">
   <img src="examples/cwgan_mar_int_example3.png" width="1000" />
@@ -59,4 +59,6 @@ Lastly, just for fan, we generate multiple images with the stats of 关羽 and �
 
 Also, 吕布 vs 郭嘉
 
-![WGAN Example](examples/lvbu_guojia.png)
+<p float="middle">
+  <img src="examples/lvbu_guojia.png" width="1000" />
+</p>
