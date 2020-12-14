@@ -27,6 +27,7 @@ Below are results from the cWGAN model. In the plot below, the left panel shows 
 - Headgears: hat vs helmet
 - Clothing: metal armour vs cross-collar civil clothing  
 - Beard styles: trimmed vs long
+Also note that the model generates higher quality artworks for underlying stats that looks reasonable amongst the 721 training samples. For example, the following stats-build generates good artworks 曹仁(3rd col, 2nd row) 牵招(1st col, 4th row), 留赞 (4th col, 3rd row) 马忠（吴国）(3rd col, 4th row). Due to the small training size, the model performs poorly for rare stats-builds, for example, 于吉 (5th col, 3rd row) who has LEAD=12, MAR=6 and CHAR =95. 
 
 ![WGAN Example](examples/cwgan_random_example2.png)
 
