@@ -33,9 +33,9 @@ Also note that the model generates higher quality artworks for underlying stats 
 
 Now we fix some randomly-generated noise and use different stats from real characters as input to the generator. The plot below demonstrates how well the model learned to map these stats into artworks. The left panel are real artworks and the right panel are generated artworks conditioned on the same stats. Below are radar graph of the stats. 
 
+![cWGAN Example](examples/cwgan_profiles_example2.png)
 <p float="middle">
-  <img src="examples/cwgan_profiles_example2.png" width="800" />
-  <img src="examples/cwgan_profiles_example2_stats.png" width="400" /> 
+  <img src="examples/cwgan_profiles_example2_stats.png" width="400" />
 </p>
 
 Next, we fix some randomly-generated noise and use some artificial stats as input. In the left panel, we set INT=POL=CHAR=50 and vary LEAD=MAR in the range of (0,100). The plot shows the gradual change from civial to military artwork. In the right panel, we set LEAD=MAR=CHAR=50 and vary INT=POL in the range of (0,100). The plot shows the gradual change from military to civial artwork. 
